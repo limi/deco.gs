@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Deco Grid System
+		</title>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<style type="text/css" media="screen">
+/* These classes are just here to make the FAQ have some color/whitespace.
+		Not part of the grid system. */
+		* { margin:0; padding: 0; }
+		body { max-width: 960px; margin: 0 auto;} 
+		body { font: 0.825em Helvetica, Arial, sans-serif; line-height: 1.5em;}
+		div.row { margin-top: 1em inherit; margin-bottom: 1em; }
+		h1, h2 { letter-spacing: -0.05em; line-height: 1.5em;}
+		code { font-weight: normal; }
+		p, pre  { margin: 0.5em 0; }
+		p, li {text-align: justify;}
+		a { text-decoration: none; border-bottom: 1px solid #888;}
+		ul { margin: 1em 0 1em 1.5em;}
+		hr { height: 1px; border: 0; color: #ccc; background-color: #ccc; margin: 2em 2em 2em 0; }
+		</style>
+		<link rel="stylesheet" href="decogrids-16.css" type="text/css" charset="utf-8">
+	</head>
+	<body>
+		
+		<div class="row">
+			<div class="cell width-full position-0">
+<h1>Deco Grid System (preview)</h1>
+
+<p>This is a preview site for the Deco Grid System (deco.gs) that powers the CSS part of the layout engine in the upcoming Plone 5.</p>
+
+<p>There's no real web site here yet, but if you want something to play with, here is a preview zip with the necessary files: <a href="deco-preview1.zip">deco-preview1.zip</a></p>
+
+<p>For now, this site just serves as a location to get the files related to the Plone Conference 2009 presentation, as well as the simple demo below. Check back soon, or <a href="http://limi.net/contact-info">contact me</a> if you have any feedback.</p>
+
+<p>&mdash; <a href="http://limi.net">Alexander Limi</a></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="cell width-full position-0">
+				<h1>
+					Frequently Asked Questions
+				</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell width-1:2 position-0">
+				<h2>
+					How is the Deco Grid System different from other grid frameworks like Blueprint, 960.gs, and others?
+				</h2>
+				<p>
+					We believe Deco Grids a lot simpler to understand and use, the naming convention and mental model is very very simple, and it arguably degrades better.
+				</p>
+				<ul>
+					<li>It doesn’t ship with anything outside of the grid system — font choices, form builders, other unrelated CSS. It’s built to drop right into your existing CSS code with a minimum amount of fuss.
+					</li>
+					<li>It’s really well-suited for automated layout algorithms for CMSes and other web apps.
+					</li>
+					<li>It doesn’t assume that you always work in pixel-based layouts, like a lot of other frameworks do.
+					</li>
+					<li>It doesn’t need any workarounds/hacks to work reliably in all browsers.
+					</li>
+					<li>It’s smaller than the other grid frameworks. A lot smaller. Less than 1K — vs. 11K (Blueprint), 5.4K (960 Grids), etc. We realize that this size comparison isn’t entirely fair, since they include lots of non-grid stuff, but even when you strip their files of all that, we’re still a lot more lightweight.
+					</li>
+				</ul>
+			</div>
+			<div class="cell width-1:2 position-1:2">
+				<h2>
+					Which browsers does the Deco Grid System work in?
+				</h2>
+				<p>
+					All browsers as far back as (and including!) Internet Explorer 6, without any wrapping, cropping, or other bad behaviour. It’s rock solid. It may work in older browsers, but we haven’t tested this.
+				</p>
+				<h2>
+					Does it work with both fixed and fluid layouts?
+				</h2>
+				<p>
+					Absolutely!
+				</p>
+				<h2>
+					Does the order of the cells inside a row matter?
+				</h2>
+				<p>
+					No, you can put them in the order that makes the most sense for screen readers and mobile devices.
+				</p>
+				<h2>
+					Did you invent this yourself?
+				</h2>
+				<p>
+					The base technique used in Deco is something that is documented in the article "Faux Absolute Positioning" at A List Apart. Deco is just a system that applies that method to the notion of a CSS grid system.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell width-1:4 position-0">
+				<h2>
+					How do you do vertical positioning? Deco only supplies horizontal positioning.
+				</h2>
+				<p>
+					"Grid" CSS systems are usually about horizontal placement. Vertical place­ment is easy to do with the usual CSS margins, and depends on the vertical rhythm of your layout, so Deco does not supply this — on purpose.
+				</p>
+			</div>
+			<div class="cell width-1:4 position-1:4">
+				<h2>
+					What’s a comparable CSS grid system? Are there other systems that work like Deco GS does?
+				</h2>
+				<p>
+					The closest one in philosophy and approach would be Emastic, which has a similar goal of supplying a layout that scales well and doesn’t rely on pixel placement. Emastic uses a less robust and more complicated positioning technique, though.
+				</p>
+			</div>
+			<div class="cell width-1:4 position-1:2">
+				<h2>
+					What’s with the <code>\3a</code> notation in the definitions for the <code>width-1:2</code> etc. classes?
+				</h2>
+				<p>
+					It’s a workaround notation since Internet Explorer 6 (and 7, possibly) doesn’t support the plain backslash escape for class names with colon in them. You can of course rename this if you think it’s ugly. We think it’s easier to think of three quarters as <code>width-3:4</code> instead of <code>width-3_4</code> or <code>width-3-4</code>.
+				</p>
+			</div>
+			<div class="cell width-1:4 position-3:4">
+				<h2>
+					Can I nest grids inside grids?
+				</h2>
+				<p>
+					It works, but is generally not recom­mended, so you don’t ruin your layout by breaking the invisible grid too often. It works technically speaking, though.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell width-1:4 position-1:2">
+				<h2>
+					What is the size of the Deco Grid system?
+				</h2>
+				<p>
+					The baseline functionality is two classes (!), plus 16 convenience classes each for position and width. After using the YUI CSS compressor, it’s <em>714 or 907 bytes</em>, for the 12- and 16-column versions, respectively.
+				</p>
+			</div>
+			<div class="cell width-1:4 position-3:4">
+				<h2>
+					Anything else I need to know?
+				</h2>
+				<p>
+					It’s a good rule to not combine other CSS on the divs that govern the layout — at least not margins, padding &amp; positioning. Create your own elements inside instead. This makes things reliable and predictable, and will save you some debugging pain.
+				</p>
+			</div>
+			<div class="cell width-1:2 position-0">
+				<h2>
+					Isn’t the use of dedicated divs for layout semantic noise? Aren’t you just reinventing tables using divs?
+				</h2>
+				<p>
+					First of all, HTML (with some exceptions like the <code>&lt;address&gt;</code> tag) isn’t really semantic, it’s <em>structural</em>. You can of course argue this until the cows come home, but the main thing to keep in mind is that screen readers — which are the closest we get to semantics today — have no issue with using divs like this and compared to the workarounds other layouts need, we think you’ll find this approach simple and refreshing.
+				</p>
+				<p>
+					The whole point of not using tables for layout is that devices such as screen readers will interpret them as <em>data tables</em>, which they are not. They skip over any divs. This is why divs exist in the first place — a semantics-free tag to group things with.
+				</p>
+			</div>
+		</div>
+
+
+		<div class="row">
+		<hr />
+			<div class="cell width-1:3 position-2:3">
+				<h2>
+					Are there any good tools to make it easy to work with grids?
+				</h2>
+				<p>
+					Why, yes! I recommend <a href="http://www.puidokas.com/portfolio/gridfox/">Gridfox</a> as an in-browser tool to visualize grids. For designing with standard tools, the <a href="http://960.gs/">960 Grid System</a> has a lot of good templates available that you can use as stencils/layers to align your layout. These apply equally well to the Deco Grid System.
+				</p>
+			</div>
+				<div class="cell width-2:3 position-0">
+					<h2>How does Deco grid code look like?</h2>
+					<p>
+						A simple example would be:
+					</p>
+					<pre>
+&lt;div class="row"&gt;
+  &lt;div class ="cell width-4  position-0"&gt;This cell is four units wide&lt;/div&gt;
+  &lt;div class ="cell width-12 position-4"&gt;This cell is twelve units wide&lt;/div&gt;
+&lt;/div&gt;</pre>
+					<p>
+						This produces the layout below (background color added to illustrate):
+					</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="cell width-4 position-0" style="background: #ccc; padding: 1em 0; text-align: center">
+				This cell is four units wide
+			</div>
+			<div class="cell width-12 position-4" style="background: #ccc; padding: 1em 0; text-align: center">
+				This cell is twelve units wide
+			</div>
+		</div>
+	</body>
+</html>

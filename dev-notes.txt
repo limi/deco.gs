@@ -1,0 +1,10 @@
+http://www.designinfluences.com/fluid960gs/16/
+
+For typography, possibly use http://www.blueprintcss.org/tests/parts/elements.html 
+as test for whether vertical rhythm is correct.
+
+Mention Faux Absolute Postioning article
+
+Mention why this won't break browsers that have rounding error with percentages/ems.
+http://ejohn.org/blog/sub-pixel-problems-in-css/
+

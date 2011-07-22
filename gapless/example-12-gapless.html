@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Deco Grid System</title>
+<style type="text/css" media="screen">
+/* These classes are just here to make the demo have some color/whitespace.
+   Not part of the grid system. */
+body { font: 0.825em Helvetica, Arial, sans-serif; }
+* { margin:0; padding: 0; }
+div.row { margin: 1em 0; }
+div.cell {text-align: center; padding: 1em 0; background-color: #ccc; }
+div.even {background-color: #999;}
+h1 { margin: 0 0.5em; letter-spacing: -0.05em; }
+dl { margin:0.5em 2em; }
+dt { font-weight: bold; }
+dd { margin: 0 1em 1em; }
+code { font-weight: normal; }
+/* Uncomment the following to test the fixed-width version: */
+/* body { width: 960px; } */
+</style>
+
+<link rel="stylesheet" href="decogrids-12-gapless.css" type="text/css" charset="utf-8" />
+
+</head>
+
+
+<body>
+
+<h1>Basic 12-column grid demo, showing some common combinations. 
+Lock page width to 960px for a good fixed version, 
+      where each cell will be 40px with 10px margins.</h1>
+
+<div class="row">
+	<div class ="cell width-1 position-0">01</div>
+	<div class ="cell width-1 position-1 even">02</div>
+	<div class ="cell width-1 position-2">03</div>
+	<div class ="cell width-1 position-3 even">04</div>
+	<div class ="cell width-1 position-4">05</div>
+	<div class ="cell width-1 position-5 even">06</div>
+	<div class ="cell width-1 position-6">07</div>
+	<div class ="cell width-1 position-7 even">08</div>
+	<div class ="cell width-1 position-8">09</div>
+	<div class ="cell width-1 position-9 even">10</div>
+	<div class ="cell width-1 position-10">11</div>
+	<div class ="cell width-1 position-11 even">12</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-2 position-0">01</div>
+	<div class ="cell width-2 position-2 even">02</div>
+	<div class ="cell width-2 position-4">03</div>
+	<div class ="cell width-2 position-6 even">04</div>
+	<div class ="cell width-2 position-8">05</div>
+	<div class ="cell width-2 position-10 even">06</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-3 position-0">01</div>
+	<div class ="cell width-3 position-3 even">02</div>
+	<div class ="cell width-3 position-6">03</div>
+	<div class ="cell width-3 position-9 even">04</div>
+</div>
+
+
+<div class="row">
+	<div class ="cell width-4 position-0">01</div>
+	<div class ="cell width-4 position-4 even">02</div>
+	<div class ="cell width-4 position-8">03</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-4 position-0">01</div>
+	<div class ="cell width-8 position-4 even">02</div>
+</div>
+
+
+<div class="row">
+	<div class ="cell width-6 position-0">01</div>
+	<div class ="cell width-6 position-6 even">02</div>
+</div>                   
+                         
+<div class="row">        
+	<div class ="cell width-12 position-0">01</div>
+</div>
+
+<h1>Convenience classes — ¼, ½, ¾ widths and ¼, ½, ¾ positions.
+<br />Not strictly necessary, but included for your use if you want them.</h1>
+
+<div class="row">
+	<div class ="cell width-1:2 position-0">01</div>
+	<div class ="cell width-1:2 position-1:2 even">02</div>
+</div>                   
+
+<div class="row">
+	<div class ="cell width-1:4 position-0">01</div>
+	<div class ="cell width-1:4 position-1:4 even">02</div>
+	<div class ="cell width-1:4 position-1:2">03</div>
+	<div class ="cell width-1:4 position-3:4 even">04</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-1:4 position-0">01</div>
+	<div class ="cell width-1:2 position-1:4 even">02</div>
+	<div class ="cell width-1:4 position-3:4">04</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-1:4 position-0">01</div>
+	<div class ="cell width-3:4 position-1:4 even">02</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-3:4 position-0">01</div>
+	<div class ="cell width-1:4 position-3:4 even">02</div>
+</div>
+
+<h1>Convenience classes for ⅓, ⅔ widths and ⅓, ⅔ positions.
+<br />Not strictly necessary, but included for your use if you want them.</h1>
+
+<div class="row">
+	<div class ="cell width-1:3 position-0">01</div>
+	<div class ="cell width-1:3 position-1:3 even">02</div>
+	<div class ="cell width-1:3 position-2:3">03</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-1:3 position-0">01</div>
+	<div class ="cell width-2:3 position-1:3 even">02</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-2:3 position-0">01</div>
+	<div class ="cell width-1:3 position-2:3 even">02</div>
+</div>
+
+<h1>FAQ</h1>
+<dl>
+	<dt>Which browsers does the Deco Grid System work in?</dt>
+	<dd>All browsers as far back as (and including!) Internet Explorer 6, 
+		without any wrapping, cropping, or other bad behaviour. It's rock solid.
+		It may work in older browsers, but we haven't tested this.</dd>
+	<dt>Does it work with both fixed and fluid layouts?</dt>
+	<dd>Absolutely!</dd>
+	<dt>Can I nest grids inside grids?</dt>
+	<dd>Yup, it works fine, but make sure you understand good layout principles, 
+		so you don't ruin your layout by breaking the invisible grid too often.</dd>
+	<dt>What's with the <code>\3a</code> notation for the <code>w1:2</code> etc. classes?</dt>
+	<dd>It's a workaround notation since Internet Explorer 6 (and 7, possibly) doesn't support
+		the plain backslash escape for class names with colon in them. 
+		You can of course rename this if you think it's ugly. 
+		We think it's easier to think of three quarters as <code>3:4</code>.</dd>
+	<dt>Isn't the use of dedicated divs for layout semantic noise? 
+		Aren't you just reinventing tables using divs?</dt>
+	<dd>First of all, HTML (with some exceptions like the <code>&lt;address&gt;</code> tag)
+		isn't really semantic, it's <em>structural</em>. 
+		You can of course argue this until the cows come home, but the main thing 
+		to keep in mind is that screen readers — which are the closest we get to semantics today — 
+		have no issue with using divs like this and compared to the workarounds other 
+		layouts need, we think you'll find this approach simple and refreshing.</dd>
+	<dd>The whole point of not using tables for layout is that devices such as screen readers will
+		interpret them as <em>data tables</em>, which they are not. They swiftly skip over any divs.
+		This is why divs exist in the first place — a semantics-free tag to group things with.</dd>
+	<dd>Also, it frees us up to put the content 
+		in a meaningful order, and makes it easier to add support for things like
+		mobile devices.</dd>
+	<dd>And, nobody reads class names and expect them to make sense. No, really. ;-)
+		</dd>
+	<dt>What is the size of the Deco Grid system?</dt>
+	<dd>The baseline functionality is two classes (!), plus 16 convenience classes each for position and width. 
+		After using the YUI CSS compressor, it's <em>714 or 907 bytes</em>, for the 12- and 16-column versions, respectively.</dd>
+	<dt>How is the Deco Grid System different from other grid frameworks like Blueprint, 960 Grids, and others?</dt>
+	<dd>As we already mentioned, it's smaller. A lot smaller. Less than 1K — vs. 11K (Blueprint), 5.4K (960 Grids), etc.
+		We realize that this size comparison isn't entirely fair, since they include lots of non-grid stuff, 
+		but even when you strip their files of all that, we're smaller.</dd>
+	<dd>We believe Deco Grids a lot simpler to understand and use, the naming convention and mental model 
+		is very very simple, and it arguably degrades better.</dd>
+	<dd>It doesn't ship with anything outside of the grid system — font choices, form builders, other unrelated CSS. 
+		It's built to drop right into your existing CSS code with a minimum amount of fuss.</dd>
+	<dd>It's really well-suited for automated layout algorithms for CMSes and other web apps.</dd>
+	<dd>It doesn't assume that you always work in pixel-based layouts, like a lot of other frameworks do.</dd>
+	<dd>It doesn't need any workarounds/hacks to work reliably in all browsers.</dd>
+	<dt>Anything else I need to know?</dt>
+	<dd>Never try to combine stuff into the divs that govern the layout. 
+		Create your own elements inside instead. This makes things much easier and
+		very reliable and predictable.</dd>
+</dl>
+
+</body>
+</html>

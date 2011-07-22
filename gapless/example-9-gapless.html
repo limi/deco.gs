@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Deco Grid System</title>
+<style type="text/css" media="screen">
+/* These classes are just here to make the demo have some color/whitespace.
+   Not part of the grid system. */
+body { font: 0.825em Helvetica, Arial, sans-serif; }
+* { margin:0; padding: 0; }
+div.row { margin: 1em 0; }
+div.cell {text-align: center; padding: 1em 0; background-color: #ccc; }
+div.even {background-color: #999;}
+h1 { margin: 0 0.5em; letter-spacing: -0.05em; }
+dl { margin:0.5em 2em; }
+dt { font-weight: bold; }
+dd { margin: 0 1em 1em; }
+code { font-weight: normal; }
+/* Uncomment the following to test the fixed-width version: */
+/* body { width: 972px; } 
+*/</style>
+
+<link rel="stylesheet" href="decogrids-9-gapless.css" type="text/css" charset="utf-8" />
+
+</head>
+
+
+<body>
+
+<h1>Basic 9-column grid demo, showing some common combinations. 
+Lock page width to 972px for a good fixed version, 
+      where each cell will be 100px with 8px margins.</h1>
+
+<div class="row">
+	<div class ="cell width-1 position-0">01</div>
+	<div class ="cell width-1 position-1 even">02</div>
+	<div class ="cell width-1 position-2">03</div>
+	<div class ="cell width-1 position-3 even">04</div>
+	<div class ="cell width-1 position-4">05</div>
+	<div class ="cell width-1 position-5 even">06</div>
+	<div class ="cell width-1 position-6">07</div>
+	<div class ="cell width-1 position-7 even">08</div>
+	<div class ="cell width-1 position-8">09</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-2 position-0">01</div>
+	<div class ="cell width-3 position-2 even">02</div>
+	<div class ="cell width-2 position-5">03</div>
+	<div class ="cell width-2 position-7 even">04</div>
+</div>
+
+
+<div class="row">
+	<div class ="cell width-2 position-0">01</div>
+	<div class ="cell width-5 position-2 even">02</div>
+	<div class ="cell width-2 position-7">03</div>
+</div>
+
+
+<div class="row">
+	<div class ="cell width-3 position-0">01</div>
+	<div class ="cell width-3 position-3 even">02</div>
+	<div class ="cell width-3 position-6">03</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-4 position-0">01</div>
+	<div class ="cell width-5 position-4 even">02</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-3 position-0">01</div>
+	<div class ="cell width-6 position-3 even">02</div>
+</div>
+                         
+<div class="row">        
+	<div class ="cell width-9 position-0">01</div>
+</div>
+
+<h1>Convenience classes — ¼, ½, ¾ widths and ¼, ½, ¾ positions.
+<br />Not strictly necessary, but included for your use if you want them.</h1>
+
+<div class="row">
+	<div class ="cell width-1:2 position-0">01</div>
+	<div class ="cell width-1:2 position-1:2 even">02</div>
+</div>                   
+
+<div class="row">
+	<div class ="cell width-1:4 position-0">01</div>
+	<div class ="cell width-1:4 position-1:4 even">02</div>
+	<div class ="cell width-1:4 position-1:2">03</div>
+	<div class ="cell width-1:4 position-3:4 even">04</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-1:4 position-0">01</div>
+	<div class ="cell width-1:2 position-1:4 even">02</div>
+	<div class ="cell width-1:4 position-3:4">04</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-1:4 position-0">01</div>
+	<div class ="cell width-3:4 position-1:4 even">02</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-3:4 position-0">01</div>
+	<div class ="cell width-1:4 position-3:4 even">02</div>
+</div>
+
+<h1>Convenience classes for ⅓, ⅔ widths and ⅓, ⅔ positions.
+<br />Not strictly necessary, but included for your use if you want them.</h1>
+
+<div class="row">
+	<div class ="cell width-1:3 position-0">01</div>
+	<div class ="cell width-1:3 position-1:3 even">02</div>
+	<div class ="cell width-1:3 position-2:3">03</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-1:3 position-0">01</div>
+	<div class ="cell width-2:3 position-1:3 even">02</div>
+</div>
+
+<div class="row">
+	<div class ="cell width-2:3 position-0">01</div>
+	<div class ="cell width-1:3 position-2:3 even">02</div>
+</div>
+
+</body>
+</html>
